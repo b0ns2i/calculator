@@ -1,0 +1,19 @@
+﻿@model calculator.Models.Calculator
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="Index">
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p><label>Введите число a:</label></p>
+    <p><input type="number" asp-for="value1" /></p>
+    <p><label>Введите число b:</label></p>
+    <p><input type="number" asp-for="value2" /></p>
+    <p><label>Выберите операцию:</label></p>
+    <p><input type="submit" value="+" asp-for="calculate" /> <input type="submit" value="*" asp-for="calculate" /> </p>
+
+    <p><label>Результата вычислений:</label></p>
+    <p><input type="number" asp-for="@ViewData["result"]" /></p>
+</div>
+</form>
